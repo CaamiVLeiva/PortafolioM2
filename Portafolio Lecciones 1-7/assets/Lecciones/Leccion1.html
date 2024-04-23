@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecciones Portafolio</title>
+    <!-- Estilos -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/monokai-sublime.min.css'>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js'></script>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+            hljs.highlightAll();
+        });
+    </script>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/index.html">Lecciones Módulo 2 </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Lecciones</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="/assets/Lecciones/Leccion1.html">Lección 1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/assets/Lecciones/Leccion2.html">Lección
+                                2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/assets/Lecciones/Leccion3.html">Lección
+                                3</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/assets/Lecciones/Leccion4.html">Lección
+                                4</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/assets/Lecciones/Leccion5.html">Lección
+                                5</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/assets/Lecciones/Lección6.html">Lección
+                                6</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/assets/Lecciones/Leccion7.html">Lección
+                                7</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                        <button class="btn btn-success" type="submit"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--LECCIÓN 1 -->
+    <h1 class="display-2 text-center">Lección 1</h1>
+<hr>
+    <div class="container" id="leccion1">
+        <section class="mb-4">
+            <h5>1. ¿Qué se entiende por desarrollo web?.</h5>
+            <p class="fs-5">El desarrollo web es crear sitios web o aplicaciones para internet, desde diseñarlos hasta
+                mantenerlos, asegurandose de que funcionen correctamente en distintos dispositivos y navegadores.</p>
+            <h5>2. Diferencias entre Front-End, Back-End y Fullstack.</h5>
+            <p class="fs-5">
+            <table class="table table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Front End</th>
+                        <th>Back  End</th>
+                        <th>Full Stack</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Diseño Visual del sitio web</td>
+                        <td>Procesamiento de datos en el servidor</td>
+                        <td>Desarrollo tanto de Front-End como del Back-End</td>
+                    </tr>
+                    <tr>
+                        <td>Creación y organización del contenido</td>
+                        <td>Gestion de base de datos</td>
+                        <td>Capacidad para trabajar en todas las capas de desarrollo de una aplicación o página web</td>
+                    </tr>
+                    <tr>
+                        <td>Implementación de funcionalidades que se ejecutan en el navegador.</td>
+                        <td>Implementación lógica detras de escena de la aplicación o página web</td>
+                        <td>Conocimiento integral de la arquitectura y funcionamiento completo de una aplicación o página web.</td>
+                    </tr>
+                </tbody>
+            </table>
+            </p>
+            <h5>3. ¿Qué es el lenguaje de marcación de hipertexto(HTML)?.</h5>
+            <p>
+            <pre>
+                        <code class="Languagehtml">
+                            &lt;!DOCTYPE html&gt;
+                            &lt;html lang=&quot;es&quot;&gt;
+                            &lt;head&gt; &lt;!--Meta datos--&gt;
+                                &lt;title&gt;Título de la página&lt;/title&gt;
+                            &lt;/head&gt;
+                            &lt;body&gt;
+                                &lt;header&gt; &lt;!--Encabezado de la página--&gt; 
+                                    &lt;img&gt; &lt;!--Enlazar una imagen--&gt; 
+                                &lt;/header&gt;
+                                &lt;nav&gt; &lt;!--Navegador--&gt; 
+                                    &lt;ul&gt; &lt;!--Lista desordenada, en este caso para el navegador--&gt; 
+                                        &lt;li&gt; &lt;!--Elemento de una lista--&gt; 
+                                        &lt;li&gt;
+                                        &lt;li&gt;
+                                &lt;/nav&gt;
+                            &lt;article&gt; &lt;!--Contenido Principal de la página--&gt;
+                                &lt;h1&gt;Encabezado principal&lt;/h1&gt;
+                                &lt;p&gt;Este es un párrafo de texto.&lt;/p&gt;
+                            &lt;/article&gt;
+                            &lt;footer&gt;  &lt;!--Pie de página--&gt;
+                            &lt;/footer&gt; 
+                            &lt;/body&gt;
+                            &lt;/html&gt;
+                        </code>
+                    </pre>
+            </p>
+            <h5>4. El rol del Navegador.</h5>
+            <p class="fs-5">
+                Interpreta el código HTML de una página web y lo convierte en la interfaz visual que vemos. Algunas funciones cruciales son:
+                <ol>
+                    <li><strong>Interpretación: </strong> Lee el código HTML y comprende cómo estructurar y mostrar el contenido.</li>
+                    <li><strong>Renderizado:  </strong> Utiliza el CSS para aplicar estilos y presenta la página web de manera visualmente atractiva.</li>
+                    <li><strong>Detección de Errores: </strong> Conoce y muestra los errores de programación de una página.</li>
+                </ol>
+            </p>
+            <h5>5. ¿Qué es la W3C?.</h5>
+            <p class="fs-5">
+                La World Wide Web Consortium (W3C) es una organización sin fines de lucro que se encarga de  definir las normas y protocolos para los desarrolladores para garantizar una web universalmente accesible, más allá de las diferencias de idioma, navegador, sistema operativo o plataforma.
+            </p>
+            <h5>6. Evolución del HTML hacia el HTML5.</h5>
+            <p class="fs-5">
+                Tres características importantes introducidas en HTML5: 
+                <ul>
+                    <li><strong>Mejoras en formularios: </strong> Introduccion de nuevos tipos de entrada y validaciones.</li>
+                    <li><strong>Semántica Mejorada: </strong> Agregó elementos como '&lt;header&gt;','&lt;footer&gt;','&lt;nav&gt;', entre otros. </li>
+                    <li><strong>Soporte multimedia: </strong> Permitió la inclusión de audio y video nativo en las páginas web.</li>
+                </ul>
+            </p>
+            <h5>7. La triada HTML, CSS y Javascript: contenido, presentación y comportamiento.</h5>
+            <p class="fs-5">
+                Ejemplos de como utilizar HTML, CSS Y Javascript para gestionar el contenido, la presentación y el comportamiento en una página web: 
+                <ol>
+                    <li><Strong>Contenido (HTML): </Strong> Define la estructura y el contenido de la página.</li>
+                    <li><strong>Presentación (CSS): </strong> Estiliza el contenido para hacerlo visualmente atractivo.</li>
+                    <li><strong>Comportamiento (JS): </strong> Agrega interactividad y funcionalidad dinámica a la página.</li>
+                </ol>
+            </p>
+            <h5>8. Utilizar el potencial de un editor de texto para el desarrollo.</h5>
+            <p class="fs-5">
+                Características clave de VSCode que facilitan el desarrollo web:
+                <ul>
+                    <li><strong>Resaltado de sintaxis: </strong> Ayuda a identificar y entender el código con colores distintivos.</li>
+                    <li><strong>Autocompletado: </strong> Proporciona sugerencias de código y completado automático para aumentar la productividad.</li>
+                    <li><strong>Extensiones: </strong> Permite personalizar el editor con funciones adicionales para el desarrollo web.</li>
+                </ul>
+            </p>
+            <h5>9. Conociendo el inspector de elementos en un navegador.</h5>
+            <p class="fs-5">
+                <ul>
+                    <li><strong>Abrir el Inspector: </strong> Click derecho en cualquier parte de la página y selección "Inspeccionar"
+                            <img src="/assets/img/L1-9clickderecho.png" alt="Click derecho, Inspeccionar" width="80%">
+                    </li>
+                    <li><strong>Utilizar el Inspector: </strong> Navega por el código HTML para examinar elementos, estilos y contenido de la página web de manera interactiva.
+                            <img src="/assets/img/L1-9codigo.png" alt="Código HTML del inspector" width="80%">
+                    </li>
+                    <li><strong>Modificar Elementos: </strong> Selecciona algun elemento en HTML o CSS para modificar los elementos.
+                        <img src="/assets/img/L1-9modificar.png" alt="Modificando HTML" width="80%">
+                        <img src="/assets/img/L1-9modificarestilo.png" alt="Modificando CSS" width="80%">
+                </li>
+                </ul>
+            </p>
+        </section>
+    </div>
+    <!--FIN LECCIÓN 1-->
+    <footer style="margin: 30px;">
+    </footer>
+    <!--Scripts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+    <script src="https://kit.fontawesome.com/296c253a12.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

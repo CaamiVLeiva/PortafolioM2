@@ -1,0 +1,118 @@
+.display-2{
+    margin:  100px;
+}
+
+p{
+    margin-left: 3%;
+}
+ul,ol{
+    margin-left: 4%;
+}
+
+section h5{
+    box-shadow: rgba(247, 84, 84, 0.35) 0px -50px 36px -28px inset;
+}
+
+img{
+    margin: 2% auto;
+    display: block;
+}
+
+
+#leccion1 .container,
+#Leccion2 .container{
+    width: 90%;
+    margin: 20px;
+}
+
+
+#leccion3 {
+    width: 960px; /* Diseño fijado con un ancho de 960px */
+    margin: 0 auto;
+    overflow: hidden; /* Evitar que los elementos floten fuera del contenedor */
+    align-items: center;  /* Diseño fijo centrado */
+}
+
+#leccion3 h1,
+#leccion3 h2 {
+    text-align: center; /* Encabezado de nivel 1 centrado */
+}
+
+#leccion3 aside {
+    float: left;
+    width: 260px;   /* Primera columna 260px de ancho */
+}
+
+#leccion3 ul {
+    padding: 0;
+}
+
+#leccion3 .description,
+#leccion3 .content {
+    width: 700px;    /* Segunda columna 700px de ancho*/
+    overflow: hidden; /* Evitar que los elementos floten fuera de sus contenedores */
+}
+
+#leccion3 .description h2,
+#leccion3 .content h2,
+#leccion3 aside h2 {
+    text-align: left;
+    color: #000000;
+}
+
+#leccion3 .main-content {
+    margin-left: 280px;
+}
+
+#leccion3 .column {
+    float: left;
+    width: calc(33.33% - 3%); /* Usar calc() para dividir el espacio en tres columnas */
+    margin-right: 3%;
+}
+
+#leccion3 .column:last-child {
+    margin-right: 0;
+}
+
+#leccion3 .column p {
+    margin: 0 0 10px;
+}
+
+
+
+#leccion5 .boton{
+    width:  220px;
+    height: 300px;
+    background-color: #40e0d0;
+    border-radius: 33px 33px 33px 33px;
+        -webkit-border-radius: 33px 33px 33px 33px;
+        -moz-border-radius: 33px 33px 33px 33px;
+    border: 6px solid #00787b;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 150px;
+    line-height: 90px;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+
+@media screen and (max-width: 960px) {
+    #leccion3 .container {
+        width: 100%; /* Cambiar el ancho del contenedor al 100% en pantallas pequeñas */
+    }
+
+    #leccion3 .aside {
+        float: none;
+        width: 100%; /* Ocupar todo el ancho en pantallas pequeñas */
+    }
+
+    #leccion3 .description,
+    #leccion3 .content {
+        width: 100%; /* Ocupar todo el ancho en pantallas pequeñas */
+        margin-left: 0; /* Eliminar el margen izquierdo */
+    }
+}

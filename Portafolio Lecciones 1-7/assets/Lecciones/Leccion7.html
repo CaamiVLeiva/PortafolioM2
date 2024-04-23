@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecciones Portafolio</title>
+    <!-- Estilos -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/monokai-sublime.min.css'>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js'></script>
+</head>
+
+<body>
+    <style>
+        img{
+            width: 60%;
+        }
+    </style>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/index.html">Lecciones Módulo 2 </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Lecciones</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="/assets/Lecciones/Leccion1.html">Lección 1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="/assets/Lecciones/Leccion2.html">Lección
+                                2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="/assets/Lecciones/Leccion3.html">Lección
+                                3</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="/assets/Lecciones/Leccion4.html">Lección
+                                4</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="/assets/Lecciones/Leccion5.html">Lección
+                                5</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="/assets/Lecciones/Lección6.html">Lección
+                                6</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="/assets/Lecciones/Leccion7.html">Lección
+                                7</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                        <button class="btn btn-success" type="submit"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+<!--LECCIÓN 7 -->
+        <h1 class="display-2 text-center">Lección 7</h1>
+<hr>
+        <div class="container w-50 bg-light border rounded p-4">
+            <h3 class="text-center">GIT Y GITHUB</h3>
+        </div>
+        <br>
+    <div class="container">
+        <h5>1. Necesidad de un repositorio de código fuente:</h5>
+        <p>Permite mantener un historial de cambios en el código, facilita la colaboración entre desarrolladores trabajando en paralelo de manera segura, oferece herramientas para revisar y comentar los cambios antes de integrarlos lo cual mejora la calidad, organización y seguridad.</p>
+        <h5>2. Instalación, configuración y comandos básicos: </h5>
+        <ul>
+            <li><strong>Para descargar Git </strong>debemos ir a la página oficial <a href="https://git-scm.com/">https://git-scm.com/</a>.</li>
+            <li>Una vez descargado abrimos "Git Bash" en el cual ingresaremos los siguientes comandos para <strong>configurar nombre y correo electrónico:</strong> <strong><em>'git config --global user.name "Tu Nombre"'</em></strong>  y <strong><em>'git config --global user.email "tu@email.com"'</em></strong> Con el comando <strong><em>'git config --list'</em></strong> podemos visualizar si se guardaron los cambios.
+            <img src="/assets/img/L7-2 config.png" alt=""></li>
+            <li>Algunos comandos básicos son:
+                <ul> 
+                    <li> git init: Se utiliza para iniciar un nuevo repositorio Git en un directorio existente.</li>
+                    <pre><code lang="bash">
+                        git init 
+                    </code></pre>
+                    <li> git add 'nombre_archivo': Se utiliza para agregar archivos al área de preparación.</li>
+                    <pre><code lang="bash">
+                        git add . #Agrega  todos los archivos al area de preparación.
+                    </code></pre>
+                    <li>'git commit -m"Comentario"': Se utiliza para guardar los cambios en el repositorio local junto con un mensaje descriptivo.</li>
+                    <pre><code lang="bash">
+                        git commit -m "Mensaje descriptivo del cambio." #Realiza el primer envío a la base de datos local.
+                    </code></pre>
+                    <li>'git status': Verifica el estado del repositorio para ver qué archivos han sido modificados, agregados o eliminados.</li>
+                    <pre><code lang="bash">
+                        git status
+                    </code></pre>
+                    <li>'git remote': Al crear un repositorio en GitHub puedes configurar tu repositorio local para apuntal al remoto.</li>
+                    <pre><code lang="bash">
+                        git remote add origin URL_del_repositorio_remoto 
+                        #El enlace aparece en tu repositorio GitHub
+                    </code></pre>
+                    <li>'git push': Una vez hechos los cambios necesarios, se utiliza este comando para enviarlos al repositorio remoto.</li>
+                    <pre><code lang="bash">
+                        git push -u origin main 
+                    </code></pre>
+                </ul>
+            </li>
+        </ul>
+        <h5>3. Commits y restauración de archivos: </h5>
+        <p>
+            <ul>
+                <li>Utilizamos el comando 'touch' para crear un archivo en la ruta actual
+                    <img src="/assets/img/L7-3 gitcreacionarchivo.png" alt="touch archivo-txt">
+                </li>
+                <li>
+                    Usamos los comandos 'git add' y 'git commit -m' para subir el archivo al area de preparación y para guardar los cambios.
+                    <img src="/assets/img/L7-3 subiryguardar1.png" alt="Primer git add y commit">
+                    <img src="/assets/img/L7-3 creacionarchivo.png" alt="archivo en carpeta">
+                </li>
+                <li>
+                    Realizamos un cambio en archivo, para volver a subirlo y guardarlo.
+                    <img src="/assets/img/l7-3 archivoprimercambio.png" alt="Archivo con cambios">
+                    <img src="/assets/img/L7-3 gitsubiryguardarprimercambio.png" alt="Segundo git add y commit">
+                </li>
+                <li>
+                    Repetimos el paso anterior pero agregando mas texto al archivo.
+                    <img src="/assets/img/L7-3 archivosegundocambio.png" alt="Segundo cambio del archivo">
+                    <img src="/assets/img/L7-3 gitsubiryguardarsegundocambio.png" alt=" Git add y commit del segundo cambio">
+                </li>
+                <li>
+                    Ahora, con los cambios realizados y dos commits hechos ingresamos el comando 'git checkout HEAD-1 NOMBRE_ARCHIVO'. Lo que nos permite restaurar una versión anterior del archivo, en este caso -1(una version anterior). 
+                    <img src="/assets/img/L7-3 githead.png" alt="comando para restaurar una version anterior del archivo">
+                    <img src="/assets/img/L7-3 archivorestaurado.png" alt="Archivo restaurado al primer cambio">
+                </li>
+            </ul>
+        </p>
+        <h5>4. Cambios de nombres: </h5>
+        <p> Para cambiar el nombre de un archivo usamos el comando 'git mv nombre_antiguo  nombre_nuevo'. Con el comando 'ls' verificamos el nombre del archivo en el directorio.
+            <img src="/assets/img/L7-4 archivonombreactual.png" alt="Nombre actual archivo">
+            <img src="/assets/img/L7-4 gitcambiarnombre.png" alt="Cambiando el nombre en git">
+            <img src="/assets/img/L7-4 archivonombrecambiado.png" alt="Nombre cambiado archivo">
+        </p>
+        <h5>5. Ignorando archivos: </h5>
+        <p></p>
+        <h5>6. Ramas uniones, conflictos y tags: </h5>
+        <p></p>
+        <h5>7. Stash y Rebase:</h5>
+        <p></p>
+        <h5>8. Repositorios remotos, Push y Pull: </h5>
+        <p></p>
+        <h5>9. Fetch v/s Pull</h5>
+        <p></p>
+        <h5>10. Clonando un repositorio: </h5>
+        <p></p>
+        <h5>11. Documentando un proyecto con Markdown: </h5>
+        <p></p>
+        <h5>12. Administrando Pull Request</h5>
+        <p></p>
+        <h5>13. Flujos de trabajo con Github: </h5>
+        <p></p>
+    </div>
+
+
+
+<!--FIN LECCIÓN 7 -->
+    <!--SCRIPTS-->
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+    <script src="https://kit.fontawesome.com/296c253a12.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
