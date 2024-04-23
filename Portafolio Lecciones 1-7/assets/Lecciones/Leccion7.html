@@ -16,7 +16,7 @@
 
 <body>
     <style>
-        img{
+        img {
             width: 60%;
         }
     </style>
@@ -81,23 +81,31 @@
             </div>
         </div>
     </nav>
-<!--LECCIÓN 7 -->
-        <h1 class="display-2 text-center">Lección 7</h1>
-<hr>
-        <div class="container w-50 bg-light border rounded p-4">
-            <h3 class="text-center">GIT Y GITHUB</h3>
-        </div>
-        <br>
+    <!--LECCIÓN 7 -->
+    <h1 class="display-2 text-center">Lección 7</h1>
+    <hr>
+    <div class="container w-50 bg-light border rounded p-4">
+        <h3 class="text-center">GIT Y GITHUB</h3>
+    </div>
+    <br>
     <div class="container">
         <h5>1. Necesidad de un repositorio de código fuente:</h5>
-        <p>Permite mantener un historial de cambios en el código, facilita la colaboración entre desarrolladores trabajando en paralelo de manera segura, oferece herramientas para revisar y comentar los cambios antes de integrarlos lo cual mejora la calidad, organización y seguridad.</p>
+        <p>Permite mantener un historial de cambios en el código, facilita la colaboración entre desarrolladores
+            trabajando en paralelo de manera segura, oferece herramientas para revisar y comentar los cambios antes de
+            integrarlos lo cual mejora la calidad, organización y seguridad.</p>
         <h5>2. Instalación, configuración y comandos básicos: </h5>
         <ul>
-            <li><strong>Para descargar Git </strong>debemos ir a la página oficial <a href="https://git-scm.com/">https://git-scm.com/</a>.</li>
-            <li>Una vez descargado abrimos "Git Bash" en el cual ingresaremos los siguientes comandos para <strong>configurar nombre y correo electrónico:</strong> <strong><em>'git config --global user.name "Tu Nombre"'</em></strong>  y <strong><em>'git config --global user.email "tu@email.com"'</em></strong> Con el comando <strong><em>'git config --list'</em></strong> podemos visualizar si se guardaron los cambios.
-            <img src="/assets/img/L7-2 config.png" alt=""></li>
+            <li><strong>Para descargar Git </strong>debemos ir a la página oficial <a
+                    href="https://git-scm.com/">https://git-scm.com/</a>.</li>
+            <li>Una vez descargado abrimos "Git Bash" en el cual ingresaremos los siguientes comandos para
+                <strong>configurar nombre y correo electrónico:</strong> <strong><em>'git config --global user.name "Tu
+                        Nombre"'</em></strong> y <strong><em>'git config --global user.email
+                        "tu@email.com"'</em></strong> Con el comando <strong><em>'git config --list'</em></strong>
+                podemos visualizar si se guardaron los cambios.
+                <img src="/assets/img/L7-2 config.png" alt="">
+            </li>
             <li>Algunos comandos básicos son:
-                <ul> 
+                <ul>
                     <li> git init: Se utiliza para iniciar un nuevo repositorio Git en un directorio existente.</li>
                     <pre><code lang="bash">
                         git init 
@@ -106,20 +114,24 @@
                     <pre><code lang="bash">
                         git add . #Agrega  todos los archivos al area de preparación.
                     </code></pre>
-                    <li>'git commit -m"Comentario"': Se utiliza para guardar los cambios en el repositorio local junto con un mensaje descriptivo.</li>
+                    <li>'git commit -m"Comentario"': Se utiliza para guardar los cambios en el repositorio local junto
+                        con un mensaje descriptivo.</li>
                     <pre><code lang="bash">
                         git commit -m "Mensaje descriptivo del cambio." #Realiza el primer envío a la base de datos local.
                     </code></pre>
-                    <li>'git status': Verifica el estado del repositorio para ver qué archivos han sido modificados, agregados o eliminados.</li>
+                    <li>'git status': Verifica el estado del repositorio para ver qué archivos han sido modificados,
+                        agregados o eliminados.</li>
                     <pre><code lang="bash">
                         git status
                     </code></pre>
-                    <li>'git remote': Al crear un repositorio en GitHub puedes configurar tu repositorio local para apuntal al remoto.</li>
+                    <li>'git remote': Al crear un repositorio en GitHub puedes configurar tu repositorio local para
+                        apuntal al remoto.</li>
                     <pre><code lang="bash">
                         git remote add origin URL_del_repositorio_remoto 
                         #El enlace aparece en tu repositorio GitHub
                     </code></pre>
-                    <li>'git push': Una vez hechos los cambios necesarios, se utiliza este comando para enviarlos al repositorio remoto.</li>
+                    <li>'git push': Una vez hechos los cambios necesarios, se utiliza este comando para enviarlos al
+                        repositorio remoto.</li>
                     <pre><code lang="bash">
                         git push -u origin main 
                     </code></pre>
@@ -128,145 +140,233 @@
         </ul>
         <h5>3. Commits y restauración de archivos: </h5>
         <p>
-            <ul>
-                <li>Utilizamos el comando 'touch' para crear un archivo en la ruta actual
-                    <img src="/assets/img/L7-3 gitcreacionarchivo.png" alt="touch archivo-txt">
-                </li>
-                <li>
-                    Usamos los comandos 'git add' y 'git commit -m' para subir el archivo al area de preparación y para guardar los cambios.
-                    <img src="/assets/img/L7-3 subiryguardar1.png" alt="Primer git add y commit">
-                    <img src="/assets/img/L7-3 creacionarchivo.png" alt="archivo en carpeta">
-                </li>
-                <li>
-                    Realizamos un cambio en archivo, para volver a subirlo y guardarlo.
-                    <img src="/assets/img/l7-3 archivoprimercambio.png" alt="Archivo con cambios">
-                    <img src="/assets/img/L7-3 gitsubiryguardarprimercambio.png" alt="Segundo git add y commit">
-                </li>
-                <li>
-                    Repetimos el paso anterior pero agregando mas texto al archivo.
-                    <img src="/assets/img/L7-3 archivosegundocambio.png" alt="Segundo cambio del archivo">
-                    <img src="/assets/img/L7-3 gitsubiryguardarsegundocambio.png" alt=" Git add y commit del segundo cambio">
-                </li>
-                <li>
-                    Ahora, con los cambios realizados y dos commits hechos ingresamos el comando 'git checkout HEAD-1 NOMBRE_ARCHIVO'. Lo que nos permite restaurar una versión anterior del archivo, en este caso -1(una version anterior). 
-                    <img src="/assets/img/L7-3 githead.png" alt="comando para restaurar una version anterior del archivo">
-                    <img src="/assets/img/L7-3 archivorestaurado.png" alt="Archivo restaurado al primer cambio">
-                </li>
-            </ul>
+        <ul>
+            <li>Utilizamos el comando 'touch' para crear un archivo en la ruta actual
+                <img src="/assets/img/L7-3 gitcreacionarchivo.png" alt="touch archivo-txt">
+            </li>
+            <li>
+                Usamos los comandos 'git add' y 'git commit -m' para subir el archivo al area de preparación y para
+                guardar los cambios.
+                <img src="/assets/img/L7-3 subiryguardar1.png" alt="Primer git add y commit">
+                <img src="/assets/img/L7-3 creacionarchivo.png" alt="archivo en carpeta">
+            </li>
+            <li>
+                Realizamos un cambio en archivo, para volver a subirlo y guardarlo.
+                <img src="/assets/img/l7-3 archivoprimercambio.png" alt="Archivo con cambios">
+                <img src="/assets/img/L7-3 gitsubiryguardarprimercambio.png" alt="Segundo git add y commit">
+            </li>
+            <li>
+                Repetimos el paso anterior pero agregando mas texto al archivo.
+                <img src="/assets/img/L7-3 archivosegundocambio.png" alt="Segundo cambio del archivo">
+                <img src="/assets/img/L7-3 gitsubiryguardarsegundocambio.png"
+                    alt=" Git add y commit del segundo cambio">
+            </li>
+            <li>
+                Ahora, con los cambios realizados y dos commits hechos ingresamos el comando 'git checkout HEAD-1
+                NOMBRE_ARCHIVO'. Lo que nos permite restaurar una versión anterior del archivo, en este caso -1(una
+                version anterior).
+                <img src="/assets/img/L7-3 githead.png" alt="comando para restaurar una version anterior del archivo">
+                <img src="/assets/img/L7-3 archivorestaurado.png" alt="Archivo restaurado al primer cambio">
+            </li>
+        </ul>
         </p>
         <h5>4. Cambios de nombres: </h5>
-        <p> Para cambiar el nombre de un archivo usamos el comando 'git mv nombre_antiguo  nombre_nuevo'. Con el comando 'ls' verificamos el nombre del archivo en el directorio.
+        <p> Para cambiar el nombre de un archivo usamos el comando 'git mv nombre_antiguo nombre_nuevo'. Con el comando
+            'ls' verificamos el nombre del archivo en el directorio.
             <img src="/assets/img/L7-4 archivonombreactual.png" alt="Nombre actual archivo">
             <img src="/assets/img/L7-4 gitcambiarnombre.png" alt="Cambiando el nombre en git">
             <img src="/assets/img/L7-4 archivonombrecambiado.png" alt="Nombre cambiado archivo">
         </p>
         <h5>5. Ignorando archivos: </h5>
         <p>
-            <ul>
-                <li>
-                    Para ignorar un archivo o una carpeta se utiliza el archivo ".gitignore". 
-                    <img src="/assets/img/L7-5 creandogitignore.png" alt="Creando gitignore">
-                    <img src="/assets/img/L7-5 gitignoreencarpeta.png" alt="">
-                </li>
-                <li>
-                    Se debe añadir el contenido que deseas ignorar.
-                    <img src="/assets/img/L7-5 agregandoarchivoalgitignore.png" alt="Agregando nombres al gitignore">
-                </li>
-                <li>
-                    Guardamos y verificamos que el archivo que deseamos ignorar no se suba a nuestro repositorio.
-                    <img src="/assets/img/L7-5 guardartodoyverquenoestenombres.png" alt="guardandocambios">
-                </li>
-            </ul>
+        <ul>
+            <li>
+                Para ignorar un archivo o una carpeta se utiliza el archivo ".gitignore".
+                <img src="/assets/img/L7-5 creandogitignore.png" alt="Creando gitignore">
+                <img src="/assets/img/L7-5 gitignoreencarpeta.png" alt="">
+            </li>
+            <li>
+                Se debe añadir el contenido que deseas ignorar.
+                <img src="/assets/img/L7-5 agregandoarchivoalgitignore.png" alt="Agregando nombres al gitignore">
+            </li>
+            <li>
+                Guardamos y verificamos que el archivo que deseamos ignorar no se suba a nuestro repositorio.
+                <img src="/assets/img/L7-5 guardartodoyverquenoestenombres.png" alt="guardandocambios">
+            </li>
+        </ul>
         </p>
         <h5>6. Ramas uniones, conflictos y tags: </h5>
         <p>
-            <ul>
-                <li>Utilizamos el comando 'git  branch nombre_rama' para crear una nueva rama
-                    <img src="/assets/img/L7-6 creacionrama.png" alt="Creación rama">
-                </li>
-                <li>
-                    Para cambiar a la rama creada utilizamos el comando 'git checkout nombre_rama'
-                    <img src="/assets/img/L7-6 cambiarderama.png" alt="Cambiar de rama">
-                </li>
-                <li>
-                    Para fusionar una rama con la rama actual utilizamos el comando 'git merge nombre_rama'
-                </li>
-                <li>Si hay conflictos entre las ramas, Git nos avisará y mostrará los conflictos.
-                    
-                    <ul>
-                        <li><strong>Problema:</strong>
+        <ul>
+            <li>Utilizamos el comando 'git branch nombre_rama' para crear una nueva rama
+                <img src="/assets/img/L7-6 creacionrama.png" alt="Creación rama">
+            </li>
+            <li>
+                Para cambiar a la rama creada utilizamos el comando 'git checkout nombre_rama'
+                <img src="/assets/img/L7-6 cambiarderama.png" alt="Cambiar de rama">
+            </li>
+            <li>
+                Para fusionar una rama con la rama actual utilizamos el comando 'git merge nombre_rama'
+            </li>
+            <li>Si hay conflictos entre las ramas, Git nos avisará y mostrará los conflictos.
 
-                            Al intentar cambiar de la rama rama_prueba a la rama main, Git indicó que había cambios no comprometidos en el archivo Portafolio Lecciones 1-7/assets/Lecciones/Leccion7.html.
-                            Al fusionar las ramas rama_prueba y main, Git mostró archivos no rastreados y cambios en otros archivos.
-                        </li>
-                        <li>
-                            <strong>Resolución:</strong>
-                            Se realizó un commit de los cambios en la rama rama_prueba.
-                            Se cambiaron a la rama main.
-                            Se fusionaron las ramas rama_prueba y main.
-                            Se revisaron los archivos no rastreados y se agregaron al repositorio según fuera necesario.
-                            Se verificó que los cambios estuvieran comprometidos correctamente y se aseguró de que no hubiera conflictos pendientes.
-                        </li>
+                <ul>
+                    <li><strong>Problema:</strong>
+
+                        Al intentar cambiar de la rama rama_prueba a la rama main, Git indicó que había cambios no
+                        comprometidos en el archivo Portafolio Lecciones 1-7/assets/Lecciones/Leccion7.html.
+                        Al fusionar las ramas rama_prueba y main, Git mostró archivos no rastreados y cambios en otros
+                        archivos.
+                    </li>
+                    <li>
+                        <strong>Resolución:</strong>
+                        Se realizó un commit de los cambios en la rama rama_prueba.
+                        Se cambiaron a la rama main.
+                        Se fusionaron las ramas rama_prueba y main.
+                        Se revisaron los archivos no rastreados y se agregaron al repositorio según fuera necesario.
+                        Se verificó que los cambios estuvieran comprometidos correctamente y se aseguró de que no
+                        hubiera conflictos pendientes.
+                    </li>
                     <img src="/assets/img/L7-6 problema1.png" alt="Conflicto">
                     <img src="/assets/img/L7-6 problema2.png" alt="Conflicto 2">
-                </li>
-                    </ul>
-                <li>
-                    Para etiquetar una versión específica del código utilizamos el comando 'git tal nombre_tag'
-                    <img src="/assets/img/L7-6 unirramas.png" alt="Merge">
-                    <img src="/assets/img/L7-6 añadiryverificartag.png" alt="Tags">
-                </li>
-            </ul>
+            </li>
+        </ul>
+        <li>
+            Para etiquetar una versión específica del código utilizamos el comando 'git tal nombre_tag'
+            <img src="/assets/img/L7-6 unirramas.png" alt="Merge">
+            <img src="/assets/img/L7-6 añadiryverificartag.png" alt="Tags">
+        </li>
+        </ul>
         </p>
         <h5>7. Stash y Rebase:</h5>
         <p>
             Usamos el comando 'git stash' para guardar temporalmente cambios no comprometidos.
-            <pre>
+        <pre>
                 <code>
                     git stash  save "Mensaje descriptivo del cambio"
                 </code>
             </pre>
-            Usamos el comando 'git rebase -i HEAD~n'
-            <pre>
+        Usamos el comando 'git rebase -i HEAD~n'
+        <pre>
                 <code>
                     git rebase -i HEAD~1 #  rebasing el ultimo commit.
                 </code>
             </pre>
-            <img src="/assets/img/L7-7 rebase creado.png" alt="Rebase Creado">
+        <img src="/assets/img/L7-7 rebase creado.png" alt="Rebase Creado">
         </p>
         <h5>8. Repositorios remotos, Push y Pull: </h5>
         <p>
-            <ol>
-                <li>
-                    Creamos un repositorio en GitHub: <a href="https://github.com/CaamiVLeiva/PortafolioM2">Mi link</a>
-                    <img src="/assets/img/L7-8 creandorepositorio.png" alt="Crear Repo">
-                </li>
-                <li>
-                    Copiamos la URL del repositorio que hemos creado.
-                    Agregamos este repositorio como remoto con el siguiente comando:
-                    <pre>
+        <ol>
+            <li>
+                Creamos un repositorio en GitHub: <a href="https://github.com/CaamiVLeiva/PortafolioM2">Mi link</a>
+                <img src="/assets/img/L7-8 creandorepositorio.png" alt="Crear Repo">
+            </li>
+            <li>
+                Copiamos la URL del repositorio que hemos creado.
+                Agregamos este repositorio como remoto con el siguiente comando:
+                <pre>
                         <code>
-                            git remote add nombreRemoto urlDelRepositorio
+                            git remote add origin urlDelRepositorio
                         </code>
                     </pre>
-                    Verificamos los remotos agregados con el comando:
-                    <pre>
+                <img src="/assets/img/L7-8 remoteadd.png" alt="Remote Add">
+                Verificamos los remotos agregados con el comando:
+                <pre>
                         <code>
                             git remote show nombreRemoto
                         </code>
                     </pre>
-                </li>
-                <li>Hacemos un push a nuestro repositorio remoto.</li>
-                <li>Si queremos actualizar nuestra rama local con las últimas versiones de una rama remota podemos 
-                </li>
-            </ol>
+                <img src="/assets/img/L7-8 mostrarremotos.png" alt="Mostrar Repositorios remotos">
+            </li>
+            <li>Con el comando 'git pull origin nombre_rama' obtenemos los cambios del repositorio remoto en tu
+                repositorio local
+                <img src="/assets/img/L7-8 pullrepositorioremote.png" alt="Pull Repositorio Remoto">
+            </li>
+            <li>Con el comando 'git push origin nombre_rama' Hacemos un push a nuestro repositorio remoto.
+                <img src="/assets/img/L7-8 pushrepositorioremoto.png" alt="Push repositorio Remoto">
+            </li>
+            <li>Podemos realizar otro pull o push para verificar que no quede nada en preparación.
+                <img src="/assets/img/L7-8 verificartranserenciarepositorio.png" alt="">
+            </li>
+        </ol>
         </p>
         <h5>9. Fetch v/s Pull</h5>
-        <p></p>
+        <p>
+        <div class="container">
+            <h2 class="mt-5 text-center">Tabla Comparativa</h2>
+            <table class="table mt-3">
+                <thead class="thead-dark">
+                    <tr>
+                        <th></th>
+                        <th>git fetch</th>
+                        <th>git pull</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Función</strong></td>
+                        <td>Descarga cambios del repositorio remoto sin fusionarlos</td>
+                        <td>Descarga y fusiona automáticamente cambios remotos</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Acciones realizadas</strong></td>
+                        <td>Solo descarga cambios</td>
+                        <td>Descarga y fusiona cambios</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Actualización local</strong></td>
+                        <td>No actualiza automáticamente la rama local</td>
+                        <td>Actualiza automáticamente la rama local con los cambios</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Control de fusiones</strong></td>
+                        <td>Requiere fusionar cambios manualmente</td>
+                        <td>Fusiona automáticamente los cambios</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ventajas</strong></td>
+                        <td>Permite revisar los cambios antes de fusionarlos</td>
+                        <td>Actualiza rápidamente la rama local con los cambios</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Desventajas</strong></td>
+                        <td>Requiere pasos adicionales para fusionar cambios</td>
+                        <td>Menos control sobre los cambios antes de la fusión</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        En temas de comando tambien se parecen bastante: 
+        <pre>
+            <code>
+                $git fetch origin //Obtiene los cambios del repositorio remoto y los guarda en tu repositorio local pero no se fusionan automaticamente en tu rama local
+            </code>
+        </pre>
+        <pre>
+            <code>
+                $git pull origin main //Primero ejecuta git fetch para obtener los cambios del repositorio remoto, para luego fusionarlos automaticamente
+            </code>
+        </pre>
+        </p>
         <h5>10. Clonando un repositorio: </h5>
-        <p></p>
+        <p>
+            <ul>
+                <li>Primero debemos tener nuestro repositorio creado en GitHub, o ir al repositorio que se quiere clonar y copiar el link: 
+                    <img src="/assets/img/L7-10 copiarenlacerepositorio.png" alt="Imagen clonacion">
+                </li>
+                <li>
+                    Luego usamos el comando 'git clone url_repositorio' para clonar un repositorio de GitHub.
+                    <img src="/assets/img/L7-10 clonarrepositorio.png" alt="GitBash clonando repositorio">
+                </li>
+            </ul>
+        </p>
         <h5>11. Documentando un proyecto con Markdown: </h5>
-        <p></p>
+        <p>
+            Para documentar nuestro proyecto vamos a utilizar una herramienta llamada Markdown, para esto creamos un archivo README.md en nuestro directorio raiz, o tambien podemos incluirlo al crear nuestro repositorio en la página de GitHub.
+            <img src="/assets/img/L7-11 crearreadme.png" alt="">
+            Ingresamos al archivo y documentamos nuestro coódigo, para conocer mas sobre la sintaxis haz <a href="https://markdown.es/sintaxis-markdown/">click aquí</a>.
+            <img src="/assets/img/L7-11 mireadme.png" alt="Visualización Readme">
+        </p>
         <h5>12. Administrando Pull Request</h5>
         <p></p>
         <h5>13. Flujos de trabajo con Github: </h5>
@@ -275,7 +375,7 @@
 
 
 
-<!--FIN LECCIÓN 7 -->
+    <!--FIN LECCIÓN 7 -->
     <!--SCRIPTS-->
     <script>hljs.highlightAll();</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
