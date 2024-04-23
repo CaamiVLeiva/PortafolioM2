@@ -179,11 +179,88 @@
             </ul>
         </p>
         <h5>6. Ramas uniones, conflictos y tags: </h5>
-        <p></p>
+        <p>
+            <ul>
+                <li>Utilizamos el comando 'git  branch nombre_rama' para crear una nueva rama
+                    <img src="/assets/img/L7-6 creacionrama.png" alt="Creación rama">
+                </li>
+                <li>
+                    Para cambiar a la rama creada utilizamos el comando 'git checkout nombre_rama'
+                    <img src="/assets/img/L7-6 cambiarderama.png" alt="Cambiar de rama">
+                </li>
+                <li>
+                    Para fusionar una rama con la rama actual utilizamos el comando 'git merge nombre_rama'
+                </li>
+                <li>Si hay conflictos entre las ramas, Git nos avisará y mostrará los conflictos.
+                    
+                    <ul>
+                        <li><strong>Problema:</strong>
+
+                            Al intentar cambiar de la rama rama_prueba a la rama main, Git indicó que había cambios no comprometidos en el archivo Portafolio Lecciones 1-7/assets/Lecciones/Leccion7.html.
+                            Al fusionar las ramas rama_prueba y main, Git mostró archivos no rastreados y cambios en otros archivos.
+                        </li>
+                        <li>
+                            <strong>Resolución:</strong>
+                            Se realizó un commit de los cambios en la rama rama_prueba.
+                            Se cambiaron a la rama main.
+                            Se fusionaron las ramas rama_prueba y main.
+                            Se revisaron los archivos no rastreados y se agregaron al repositorio según fuera necesario.
+                            Se verificó que los cambios estuvieran comprometidos correctamente y se aseguró de que no hubiera conflictos pendientes.
+                        </li>
+                    <img src="/assets/img/L7-6 problema1.png" alt="Conflicto">
+                    <img src="/assets/img/L7-6 problema2.png" alt="Conflicto 2">
+                </li>
+                    </ul>
+                <li>
+                    Para etiquetar una versión específica del código utilizamos el comando 'git tal nombre_tag'
+                    <img src="/assets/img/L7-6 unirramas.png" alt="Merge">
+                    <img src="/assets/img/L7-6 añadiryverificartag.png" alt="Tags">
+                </li>
+            </ul>
+        </p>
         <h5>7. Stash y Rebase:</h5>
-        <p></p>
+        <p>
+            Usamos el comando 'git stash' para guardar temporalmente cambios no comprometidos.
+            <pre>
+                <code>
+                    git stash  save "Mensaje descriptivo del cambio"
+                </code>
+            </pre>
+            Usamos el comando 'git rebase -i HEAD~n'
+            <pre>
+                <code>
+                    git rebase -i HEAD~1 #  rebasing el ultimo commit.
+                </code>
+            </pre>
+            <img src="/assets/img/L7-7 rebase creado.png" alt="Rebase Creado">
+        </p>
         <h5>8. Repositorios remotos, Push y Pull: </h5>
-        <p></p>
+        <p>
+            <ol>
+                <li>
+                    Creamos un repositorio en GitHub: <a href="https://github.com/CaamiVLeiva/PortafolioM2">Mi link</a>
+                    <img src="/assets/img/L7-8 creandorepositorio.png" alt="Crear Repo">
+                </li>
+                <li>
+                    Copiamos la URL del repositorio que hemos creado.
+                    Agregamos este repositorio como remoto con el siguiente comando:
+                    <pre>
+                        <code>
+                            git remote add nombreRemoto urlDelRepositorio
+                        </code>
+                    </pre>
+                    Verificamos los remotos agregados con el comando:
+                    <pre>
+                        <code>
+                            git remote show nombreRemoto
+                        </code>
+                    </pre>
+                </li>
+                <li>Hacemos un push a nuestro repositorio remoto.</li>
+                <li>Si queremos actualizar nuestra rama local con las últimas versiones de una rama remota podemos 
+                </li>
+            </ol>
+        </p>
         <h5>9. Fetch v/s Pull</h5>
         <p></p>
         <h5>10. Clonando un repositorio: </h5>
