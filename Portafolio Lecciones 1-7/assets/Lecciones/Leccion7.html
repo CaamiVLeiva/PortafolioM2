@@ -336,7 +336,7 @@
                 </tbody>
             </table>
         </div>
-        En temas de comando tambien se parecen bastante: 
+        En temas de comando tambien se parecen bastante:
         <pre>
             <code>
                 $git fetch origin //Obtiene los cambios del repositorio remoto y los guarda en tu repositorio local pero no se fusionan automaticamente en tu rama local
@@ -350,30 +350,92 @@
         </p>
         <h5>10. Clonando un repositorio: </h5>
         <p>
-            <ul>
-                <li>Primero debemos tener nuestro repositorio creado en GitHub, o ir al repositorio que se quiere clonar y copiar el link: 
-                    <img src="/assets/img/L7-10 copiarenlacerepositorio.png" alt="Imagen clonacion">
-                </li>
-                <li>
-                    Luego usamos el comando 'git clone url_repositorio' para clonar un repositorio de GitHub.
-                    <img src="/assets/img/L7-10 clonarrepositorio.png" alt="GitBash clonando repositorio">
-                </li>
-            </ul>
+        <ul>
+            <li>Primero debemos tener nuestro repositorio creado en GitHub, o ir al repositorio que se quiere clonar y
+                copiar el link:
+                <img src="/assets/img/L7-10 copiarenlacerepositorio.png" alt="Imagen clonacion">
+            </li>
+            <li>
+                Luego usamos el comando 'git clone url_repositorio' para clonar un repositorio de GitHub.
+                <img src="/assets/img/L7-10 clonarrepositorio.png" alt="GitBash clonando repositorio">
+            </li>
+        </ul>
         </p>
         <h5>11. Documentando un proyecto con Markdown: </h5>
         <p>
-            Para documentar nuestro proyecto vamos a utilizar una herramienta llamada Markdown, para esto creamos un archivo README.md en nuestro directorio raiz, o tambien podemos incluirlo al crear nuestro repositorio en la página de GitHub.
+            Para documentar nuestro proyecto vamos a utilizar una herramienta llamada Markdown, para esto creamos un
+            archivo README.md en nuestro directorio raiz, o tambien podemos incluirlo al crear nuestro repositorio en la
+            página de GitHub.
             <img src="/assets/img/L7-11 crearreadme.png" alt="">
-            Ingresamos al archivo y documentamos nuestro coódigo, para conocer mas sobre la sintaxis haz <a href="https://markdown.es/sintaxis-markdown/">click aquí</a>.
+            Ingresamos al archivo y documentamos nuestro coódigo, para conocer mas sobre la sintaxis haz <a
+                href="https://markdown.es/sintaxis-markdown/">click aquí</a>.
             <img src="/assets/img/L7-11 mireadme.png" alt="Visualización Readme">
         </p>
         <h5>12. Administrando Pull Request</h5>
-        <p></p>
+        <p>
+            Los pull request son una forma en que puedes enviar tus cambios a alguien más para su revisión y
+            eventualmente integrarlos a la rama main del proyecto.
+        <ul>
+            <li>
+                Primero debemos crear una nueva rama:
+                <img src="/assets/img/L7-12 creandonuevarama.png" alt="Creando nueva rama">
+            </li>
+            <li>
+                Agregamos los cambios a esta nueva rama:
+                <img src="/assets/img/L7-12 agregandocambiosnuevarama.png" alt="git add .">
+            </li>
+            <li>
+                Subimos los cambios a esta nueva rama:
+                <img src="/assets/img/L7-12 subiendocambiosanuevarama.png" alt="git commmit">
+            </li>
+            <li>
+                Creamos la solicitud de pull request (Pull Request) en GitHub, o la seleccionamos si es que nos aparece
+                la alerta.
+                <img src="/assets/img/L7-12 compararypullrequest.png" alt="Comparación entre ramas">
+            </li>
+            <li>
+                Agregamos comentarios descriptivos sobre los cambios realizados:
+                <img src="/assets/img/L7-12 comentando.png" alt="Comentando pull request">
+            </li>
+            <li>
+                Más abajo nos aparecerá si es que las ramas pueden fusionarse sin problema o si, en caso de haberlos los
+                mostrará para poder solucionarlos.
+                <img src="/assets/img/L7-12 fusionar cambios.png" alt="Fusionando cambios">
+                <img src="/assets/img/L7-12 ramasmarged.png" alt="Ramas fusionadas">
+            </li>
+        </ul>
+        </p>
         <h5>13. Flujos de trabajo con Github: </h5>
-        <p></p>
+        <p>
+        <div class="container">
+            <table class="table table-bordered custom-table">
+                <thead>
+                    <tr>
+                        <th>Modelo de Trabajo</th>
+                        <th>Características</th>
+                        <th>Ventajas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Modelo de Bifurcación</td>
+                        <td>Cada desarrollador trabaja en su propia bifurcación del repositorio principal.</td>
+                        <td>Permite un enfoque descentralizado. Los desarrolladores pueden trabajar independientemente
+                            sin afectar el repositorio principal.</td>
+                    </tr>
+                    <tr>
+                        <td>Modelo de Rama por Característica</td>
+                        <td>Se crea una nueva rama para cada nueva característica o cambio en el código.</td>
+                        <td>Facilita el seguimiento de las características implementadas. Permite una gestión más
+                            granular de los cambios en el código.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </p>
     </div>
-
-
+    <footer style="margin: 100px;">
+    </footer>
 
     <!--FIN LECCIÓN 7 -->
     <!--SCRIPTS-->
